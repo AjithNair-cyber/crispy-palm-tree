@@ -1,1 +1,1 @@
-print("ereiterto
+print(sd)
