@@ -1,2 +1,2 @@
 print(njnjjnleeef
-sd
+s
