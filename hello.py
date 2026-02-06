@@ -1,1 +1,1 @@
-print(njnj
+print(njn
