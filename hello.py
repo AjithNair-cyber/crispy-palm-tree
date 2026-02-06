@@ -1,2 +1,1 @@
-print(njn
-sdfds
+prt(sdsd)
