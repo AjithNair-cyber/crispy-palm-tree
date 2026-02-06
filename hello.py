@@ -1,2 +1,2 @@
 print(njnjjnler
-Pri
+P
