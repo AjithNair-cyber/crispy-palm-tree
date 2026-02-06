@@ -1,1 +1,1 @@
-prt(sdsd)
+prt("hello world)
