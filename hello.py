@@ -1,1 +1,1 @@
-print(njnjjnleee
+print(njnjjnle
