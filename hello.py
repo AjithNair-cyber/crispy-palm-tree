@@ -1,2 +1,2 @@
 print(njnjjnler
-Print("
+Print
