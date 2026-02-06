@@ -1,3 +1,3 @@
 print(njnjjnler
 Print("heelo")
-      a=b+10
+      a=+10
