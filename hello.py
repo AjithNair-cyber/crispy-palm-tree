@@ -1,2 +1,1 @@
-print(njnjjnleeef
-s
+print(njnjjnleee
