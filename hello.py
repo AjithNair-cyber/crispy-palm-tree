@@ -1,2 +1,1 @@
-print(njnjjnler
-P
+print(njnjjnle
