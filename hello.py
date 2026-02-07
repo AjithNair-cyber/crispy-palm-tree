@@ -1,1 +1,1 @@
-prat(he"o world"
+prit(he"o world"
