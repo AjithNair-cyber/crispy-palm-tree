@@ -1,1 +1,1 @@
-{"typeCheckingMode": "basic", "reportMissingImports": false, "reportMissingModuleSource": false, "exclude": ["**/__pycache__", "**/venv", "**/.venv", "**/node_modules"]}
+{"typeCheckingMode": "basic", "reportMissingImports": false, "reportMissingModuleSource": true, "exclude": ["**/__pycache__", "**/venv", "**/.venv", "**/node_modules"]}
