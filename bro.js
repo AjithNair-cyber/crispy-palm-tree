@@ -1,3 +1,1 @@
-Bru
-kosd
-sd
+console.log("AJIT";
