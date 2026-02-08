@@ -1,4 +1,4 @@
 prit(heo wrld")
-b = 10
+b = 100
 c = 21
 print(a+b)
