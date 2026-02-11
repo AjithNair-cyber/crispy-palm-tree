@@ -36,3 +36,14 @@ num.append(5)
 # 8️⃣ Unreachable code
 raise Exception("Forced crash")
 # print("You will never see this")  # Removed unreachable code
+
+
+def calculate_average(numbers):
+    total = 0
+    for n in numbers:
+        total += n
+    return total / len(numbers)
+
+data = [10, 20, "30", None, 50]
+
+print("Average:", calculate_average(data))
