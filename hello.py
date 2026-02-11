@@ -1,4 +1,4 @@
-print("Hello wo)
+print("Hello world")
 
-func hello():
+def hello():
     print("Hello")
