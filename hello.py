@@ -38,7 +38,7 @@ raise Exception("Forced crash")
 # print("You will never see this")  # Removed unreachable code
 
 
-def calculate_average(numbers):
+func calculate_average(numbers):
     total = 0
     for n in numbers:
         total += n
