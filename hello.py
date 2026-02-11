@@ -4,7 +4,11 @@ print("Starting demo...")
 
 # 1️⃣ Logical mistake
 price = 100
+
 tax_percent = 10
+# Validate tax_percent to be non-negative
+if tax_percent < 0:
+    raise ValueError("tax_percent must be non-negative")
 # Corrected calculation to include tax
  total = price + (price * tax_percent / 100)
 print("Total price:", total)
@@ -23,6 +27,9 @@ print("Username:", user.get("username", "Not found"))
 
 # 4️⃣ TypeError
 points = 5
+# Ensure points is an integer before adding
+if not isinstance(points, int):
+    raise TypeError("points must be an integer")
 # Converted string '10' to integer 10
 print("Updated points:", points + 10)
 
