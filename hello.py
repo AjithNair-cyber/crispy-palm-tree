@@ -1,102 +1,67 @@
-import json
-import asyncio
+# Simple Demo File – Line-Based Errors
 
+print("Starting demo...")
 
-# 1️⃣ Mutable default argument bug
+# 1️⃣ Logical mistake
+price = 100
+tax_percent = 10
+total = price - (price * tax_percent / 100)  # Should add tax
+print("Total price:", total)
 
-def add_item(item, collection=None):
-    if collection is None:
-        collection = []
-    collection.append(item)
-    return collection
+# 2️⃣ ZeroDivisionError
+a = 10
+b = 0
+print("Division result:", a / b)
 
+# 3️⃣ KeyError
+user = {"name": "Ajith"}
+print("Username:", user["username"])
 
-# 2️⃣ Logical bug (wrong formula)
+# 4️⃣ TypeError
+points = 5
+print("Updated points:", points + "10")
 
-def calculate_discount(price, discount_percent):
-    # Should reduce price, but incorrectly increases it
-    return price - (price * discount_percent / 100)
+# 5️⃣ NameError
+print("Message:", message)
 
+# 6️⃣ AttributeError
+number = 10
+number.append(5)
 
-# 3️⃣ Division without guard
+# 7️⃣ ValueError
+int_value = int("abc")
 
-def calculate_ratio(a, b):
-    if b == 0:
-        raise ValueError('Division by zero is not allowed.')
-    return a / b
+print("Demo completed.")# Simple Demo File – Line-Based Errors
 
+print("Starting demo...")
 
-# 4️⃣ Unsafe dictionary access
+# 1️⃣ Logical mistake
+price = 100
+tax_percent = 10
+total = price - (price * tax_percent / 100)  # Should add tax
+print("Total price:", total)
 
-def get_user_email(user):
-    return user["email"].lower()
+# 2️⃣ ZeroDivisionError
+a = 10
+b = 0
+print("Division result:", a / b)
 
+# 3️⃣ KeyError
+user = {"name": "Ajith"}
+print("Username:", user["username"])
 
-# 5️⃣ Type issue (string + int)
+# 4️⃣ TypeError
+points = 5
+print("Updated points:", points + "10")
 
-def increment_counter(counter):
-    return counter + 1
+# 5️⃣ NameError
+print("Message:", message)
 
+# 6️⃣ AttributeError
+number = 10
+number.append(5)
 
-# 6️⃣ Async misuse
+# 7️⃣ ValueError
+int_value = int("abc")
 
-async def fetch_data():
-    await asyncio.sleep(1)
-    return {"status": "success"}
-
-
-def call_async_function():
-    result = await fetch_data()  # Added await
-    return result["status"]
-
-
-# 7️⃣ Attribute error
-
-def process_items(items):
-    items.append(100)
-    return items
-
-
-# 8️⃣ Poor exception handling
-
-def parse_json(data):
-    try:
-        return json.loads(data)
-    except:
-        return None
-
-
-# 9️⃣ KeyError
-
-def get_config_value(config):
-    return config["database"]["host"]
-
-
-# 🔟 NameError
-
-def print_total(total_amount):
-    print(total_amount)
-
-
-# Trigger block for demo
-if __name__ == "__main__":
-    print(add_item(1))
-    print(add_item(2))
-
-    print(calculate_discount(100, 10))
-    print(calculate_ratio(10, 2))
-
-    user = {"name": "Ajith", "email": "ajith@example.com"}
-    print(get_user_email(user))
-
-    print(increment_counter(5))
-    print(asyncio.run(call_async_function()))
-
-    print(process_items([1, 2, 3]))
-
-    print(parse_json("{invalid_json"))
-
-    config = {"database": {"host": "localhost"}}
-    print(get_config_value(config))
-
-    print_total(100)
+print("Demo completed.")
