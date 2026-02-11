@@ -37,12 +37,14 @@ num.append(5)
 raise Exception("Forced crash")
 # print("You will never see this")  # Removed unreachable code
 
-
 def calculate_average(numbers):
     total = 0
+    count = 0  # Initialize count
     for n in numbers:
-        total += n
-    return total / len(numbers)
+        if isinstance(n, (int, float)):  # Check if n is numeric
+            total += n
+            count += 1  # Increment count for valid numbers
+    return total / count if count > 0 else 0  # Return 0 if count is 0 to avoid division by zero
 
 data = [10, 20, "30", None, 50]
 
