@@ -1,6 +1,5 @@
+print("Hello wo")
 
-print("Hello wo)
 
-
-func hello():
+def hello():
     print("Hello")
