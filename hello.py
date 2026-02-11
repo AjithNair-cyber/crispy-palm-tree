@@ -2,13 +2,12 @@ print("hello world")
 
 b = 100
 c = 20
-
-define_d = 50  # Define 'd' before use
+d = 50  # Define 'd' before use
 # 1️⃣ Logical bug (comment says subtract, but actually adding)
 print(c - b)  # Corrected to subtraction as per comment
 
 # 2️⃣ NameError (undefined variable)
-print(define_d)  # Changed 'd' to 'define_d'
+print(d)  # Changed 'd' to 'define_d'
 
 # 3️⃣ TypeError (int + str)
 x = 50  # Changed from string to int
