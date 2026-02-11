@@ -1,30 +1,88 @@
-import math
+import json
+import asyncio
 
-def process_data(data_list):
-    print(f"Processing {len(data_list)} items...")
-    
-    # 1. LOGIC ERROR: Using 'is' instead of '==' for value comparison
-    # This might work for small integers but fail for larger ones/objects.
-    threshold = 256
-    if len(data_list) is threshold:
-        print("Threshold reached!")
 
-    for item in data_list:
-        # 2. RUNTIME ERROR: ZeroDivisionError
-        # This will crash the workflow if an item is 0.
-        result = 100 / item
-        
-        # 3. RUNTIME ERROR: TypeError 
-        # Attempting to use a string in a math function.
-        print(f"Square root: {math.sqrt(item)}")
+# 1️⃣ Mutable default argument bug
+def add_item(item, collection=[]):
+    collection.append(item)
+    return collection
 
-# 4. SYNTAX ERROR: Uncomment the line below to test a build failure
-# if True print("This will break the parser") 
 
+# 2️⃣ Logical bug (wrong formula)
+def calculate_discount(price, discount_percent):
+    # Should reduce price, but incorrectly increases it
+    return price + (price * discount_percent / 100)
+
+
+# 3️⃣ Division without guard
+def calculate_ratio(a, b):
+    return a / b
+
+
+# 4️⃣ Unsafe dictionary access
+def get_user_email(user):
+    return user["email"].lower()
+
+
+# 5️⃣ Type issue (string + int)
+def increment_counter(counter):
+    return counter + "1"
+
+
+# 6️⃣ Async misuse
+async def fetch_data():
+    await asyncio.sleep(1)
+    return {"status": "success"}
+
+
+def call_async_function():
+    result = fetch_data()  # Missing await
+    return result["status"]
+
+
+# 7️⃣ Attribute error
+def process_items(items):
+    items.append(100)
+    return items.upper()
+
+
+# 8️⃣ Poor exception handling
+def parse_json(data):
+    try:
+        return json.loads(data)
+    except:
+        return None
+
+
+# 9️⃣ KeyError
+def get_config_value(config):
+    return config["database"]["host"]
+
+
+# 🔟 NameError
+def print_total():
+    print(total_amount)
+
+
+# Trigger block for demo
 if __name__ == "__main__":
-    # Test cases to trigger the errors:
-    # 'a' will trigger a TypeError
-    # 0 will trigger a ZeroDivisionError
-    my_data = [10, 20, 0, "40"] 
-    
-    process_data(my_data)
+    print(add_item(1))
+    print(add_item(2))
+
+    print(calculate_discount(100, 10))
+    print(calculate_ratio(10, 0))
+
+    user = {"name": "Ajith"}
+    print(get_user_email(user))
+
+    print(increment_counter(5))
+    print(call_async_function())
+
+    print(process_items([1, 2, 3]))
+
+    print(parse_json("{invalid_json"))
+
+    config = {}
+    print(get_config_value(config))
+
+    print_total()
