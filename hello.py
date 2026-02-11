@@ -1,6 +1,6 @@
-print("hello world)
+print("hello world")
 b = 100
 c = 20
 
-# Subtracting two numbers
+# Adding two numbers
 print(c + b)
