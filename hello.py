@@ -9,7 +9,7 @@ print("Total price:", total)
 
 # 2️⃣ ZeroDivisionError
 a = 10
-b = 0
+b = 0  # Ensure 'b' is defined before division
 # Adding check to prevent division by zero
 if b != 0:
     print("Division result:", a / b)
