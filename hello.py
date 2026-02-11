@@ -1,5 +1,4 @@
-print("Hello wo")
-
+print("Hello world")
 
 def hello():
     print("Hello")
